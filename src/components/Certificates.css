@@ -1,0 +1,106 @@
+/* Body Styling */
+.certificates-body {
+    /* background-color: #141414; */
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* animation: backgroundShift 10s ease-in-out infinite; */
+    background: linear-gradient(180deg, #000001e6 10%, #141414e6);
+    
+}
+
+/* Title Styling */
+.certificates-body h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* transform: translateX(50%); */
+    transform: translateY(-50%);
+    /* bottom: 90vh; */
+}
+
+/* Certificates Grid Styling */
+.certificates-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.certificate {
+    background: #ffffff1a;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    padding: 80px 80px;
+    height: 40vh;
+    width: 45vw;
+    margin: 10px;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(1, 109, 224, 0.259);
+    box-sizing: border-box;
+}
+
+
+/* Top-Left Icon Styling */
+.certificate-icon {
+    font-size: 2.5rem;
+    color: #05d0eb;
+    position: absolute;
+    top: 30px; 
+    left: 30px; 
+}
+
+/* Title in Certificate */
+.certificate a{
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+
+.certificate h3 {
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    width: 250px;
+    color: #ffffff;
+    text-align:left;
+    /* white-space: nowrap;  */
+    overflow:hidden; 
+    position: relative;
+    right:35px;   
+}
+
+.certificate-link-icon {
+    font-size: 1.5rem;
+    color: #e50914;
+    position: absolute;
+    bottom: 100px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    transition: transform 0.3s ease;
+}
+.certificate-link-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* Description in Certificate */
+.certificate p {
+    font-size: 1rem;
+    color: #b3b3b3;
+    position: relative;
+    right: 40%;
+}
+
+/* Hover Effect */
+.certificate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+}
