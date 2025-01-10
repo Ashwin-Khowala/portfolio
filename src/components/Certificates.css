@@ -21,6 +21,7 @@
     /* transform: translateX(50%); */
     transform: translateY(-50%);
     /* bottom: 90vh; */
+    border-bottom: 2px solid #05d0eb;
 }
 
 /* Certificates Grid Styling */

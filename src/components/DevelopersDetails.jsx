@@ -15,7 +15,7 @@ export default function DeveloperDetails() {
   const navigate = useNavigate();
 
   const handleNavigation = (route) => {
-    navigate(route); // Navigate to the specified route
+    navigate(route); 
   };
 
   return (
