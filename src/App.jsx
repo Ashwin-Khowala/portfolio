@@ -1,24 +1,41 @@
 import './App.css'
-import NavBar from './components/NavBar'
-import ProfileBanner from './components/ProfileBanner'
-import DevelopersDetails from './components/DevelopersDetails'
-import Certificates from './components/Certificates'
-import {BrowserRouter as  Routes, Route} from 'react-router-dom'
+import {BrowserRouter , Routes, Route} from 'react-router-dom'
+import {React,lazy , useEffect,useState} from 'react'
+
+const LoadingPage = lazy(()=>import('./components/LoadingPage'));
+const NavBar = lazy(()=>import('./components/NavBar'));
+const ProfileBanner = lazy(()=>import('./components/ProfileBanner'));
+const DevelopersDetails = lazy(()=>import('./components/DevelopersDetails'));
+const Certificates = lazy(()=>import('./components/Certificates'));
 
 function App() {
 
-  return <div>
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoaded = () => {
+    setIsLoading(false); // Hide the loading screen
+  };
+ 
+ return <div>
+  
     <BrowserRouter>
     <NavBar />
       <Routes>
         <Route path='/'
           element={<div className='container'> 
-            <ProfileBanner />
-            <DevelopersDetails />
+            {isLoading ? <LoadingPage onLoaded={handleLoaded} /> : <DashBoard />}
           </div> } />
         <Route path='/certifications' element={<Certificates />} />
       </Routes>
     </BrowserRouter>
+  </div>
+}
+
+
+function DashBoard() {
+  return <div>
+    <ProfileBanner/>
+    <DevelopersDetails/>
   </div>
 }
 
