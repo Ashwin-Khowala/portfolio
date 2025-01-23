@@ -33,7 +33,7 @@ export default function NavBar() {
             <div className='nav-links'>
                 <ul>
                     <li>
-                    <a href='#'>Home</a>
+                    <a href='/'>Home</a>
                     </li>
                     <li>
                     <a href='#'>About</a>

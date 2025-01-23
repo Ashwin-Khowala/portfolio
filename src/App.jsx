@@ -7,6 +7,8 @@ const NavBar = lazy(()=>import('./components/NavBar'));
 const ProfileBanner = lazy(()=>import('./components/ProfileBanner'));
 const DevelopersDetails = lazy(()=>import('./components/DevelopersDetails'));
 const Certificates = lazy(()=>import('./components/Certificates'));
+const Skills=lazy(()=>import('./components/Skills'));
+
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
   };
  
  return <div>
-  
+
     <BrowserRouter>
     <NavBar />
       <Routes>
@@ -26,6 +28,7 @@ function App() {
             {isLoading ? <LoadingPage onLoaded={handleLoaded} /> : <DashBoard />}
           </div> } />
         <Route path='/certifications' element={<Certificates />} />
+        <Route path='/skills' element={<Skills />} />
       </Routes>
     </BrowserRouter>
   </div>

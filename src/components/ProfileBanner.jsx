@@ -26,7 +26,7 @@ export default function ProfileBanner() {
                     </p>
                 </button>
                 <button className="skills-btn button">
-                    <img src={SkillsIcon} className='skills-icon' alt="" srcset=""  />
+                    <img src={SkillsIcon} className='skills-icon' alt="" srcset="" />
                     <p>
                         Skills
                     </p>
