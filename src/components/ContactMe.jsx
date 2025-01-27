@@ -1,0 +1,44 @@
+import React from 'react'
+import './ContactMe.css'
+import { FaLinkedin ,FaPhoneAlt} from 'react-icons/fa';
+import { IoIosMail } from "react-icons/io";
+
+
+export default function ContactMe() {
+  return (
+    <div className='container'>
+        <div className='linkedIn-container'>
+            <div className='user-details'>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFe3XAiDgVRGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698249138375?e=1743638400&v=beta&t=DZqYCY8JIJHMcQoCzXrdgLDr5H91npS_ZM5w9CCRVT4" alt="" />
+
+                <p className='name'>Ashwin Khowala</p>
+                <p className='user-detail'>Aspiring Software Developer</p>
+                <p className='user-description'>
+                I am an aspiring software developer with a strong passion for web development. Currently, I am focused on building dynamic web applications using Node.js for the backend and React for the frontend.  
+                </p>
+                <a href='https://www.linkedin.com/in/ashwin-khowala-072493270/' >
+                <FaLinkedin style={{ marginRight: '8px' }} /> 
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div className='contact-details'>
+            <div>
+                <p className='desc'>Feel Free to Reach Out!</p>
+            </div>
+            <div className='mail'>
+                <div className='icons'>
+                    <IoIosMail/>
+                </div>
+                <a href="mailto:ashwinkhowala.work@gmail.com">ashwinkhowala.work@gmail.com</a>
+            </div>
+            <div className='mobile'>
+                <div className='icons'>
+                    <FaPhoneAlt/>
+                </div>
+                <a href="tel:+91 8240468683">+91 8240468683</a>
+            </div>
+        </div>
+    </div>
+  )
+}

@@ -10,6 +10,7 @@ import './App.css';
 
 const Certificates = lazy(() => import('./components/Certificates'));
 const Skills = lazy(() => import('./components/Skills'));
+const ContactMe =lazy(()=>import('./components/ContactMe'));
 
 function App() {
   const setIsLoading = useSetRecoilState(isLoadingAtom);
@@ -44,6 +45,7 @@ function App() {
             />
             <Route path="/certifications" element={<Certificates />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path='/contact' element={<ContactMe/>}/>
           </Routes>
         </Suspense>
       </BrowserRouter>
