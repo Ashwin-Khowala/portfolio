@@ -1,45 +1,63 @@
-import './App.css'
-import {BrowserRouter , Routes, Route} from 'react-router-dom'
-import {React,lazy , useEffect,useState} from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { lazy, useEffect, Suspense, useState } from 'react';
+import { useSetRecoilState, useRecoilValue } from 'recoil';
+import { isLoadingAtom } from './atoms/IsLoading';
+import LoadingPage from './components/LoadingPage';
+import NavBar from './components/NavBar';
+import ProfileBanner from './components/ProfileBanner';
+import DevelopersDetails from './components/DevelopersDetails';
+import './App.css';
 
-const LoadingPage = lazy(()=>import('./components/LoadingPage'));
-const NavBar = lazy(()=>import('./components/NavBar'));
-const ProfileBanner = lazy(()=>import('./components/ProfileBanner'));
-const DevelopersDetails = lazy(()=>import('./components/DevelopersDetails'));
-const Certificates = lazy(()=>import('./components/Certificates'));
-const Skills=lazy(()=>import('./components/Skills'));
-
+const Certificates = lazy(() => import('./components/Certificates'));
+const Skills = lazy(() => import('./components/Skills'));
 
 function App() {
+  const setIsLoading = useSetRecoilState(isLoadingAtom);
+  const isLoading = useRecoilValue(isLoadingAtom);
+  const [firstLoad, setFirstLoad] = useState(true);
 
-  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    if (firstLoad) {
+      setIsLoading(true); // Show loading on initial load
+      const timer = setTimeout(() => {
+        setIsLoading(false); // Hide loading screen after initial load
+        setFirstLoad(false); // Update state to prevent further loading
+      }, 2000); // Simulate initial loading
 
-  const handleLoaded = () => {
-    setIsLoading(false); // Hide the loading screen
-  };
- 
- return <div>
+      return () => clearTimeout(timer);
+    }
+  }, [firstLoad, setIsLoading]);
 
-    <BrowserRouter>
-    <NavBar />
-      <Routes>
-        <Route path='/'
-          element={<div className='container'> 
-            {isLoading ? <LoadingPage onLoaded={handleLoaded} /> : <DashBoard />}
-          </div> } />
-        <Route path='/certifications' element={<Certificates />} />
-        <Route path='/skills' element={<Skills />} />
-      </Routes>
-    </BrowserRouter>
-  </div>
+  return (
+    <div>
+      <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+          <NavBar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="container">
+                  {isLoading ? <LoadingPage /> : <DashBoard />}
+                </div>
+              }
+            />
+            <Route path="/certifications" element={<Certificates />} />
+            <Route path="/skills" element={<Skills />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </div>
+  );
 }
-
 
 function DashBoard() {
-  return <div>
-    <ProfileBanner/>
-    <DevelopersDetails/>
-  </div>
+  return (
+    <div>
+      <ProfileBanner />
+      <DevelopersDetails />
+    </div>
+  );
 }
 
-export default App
+export default App;

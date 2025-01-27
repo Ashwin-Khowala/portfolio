@@ -1,21 +1,23 @@
 import loadingVideo from "../assets/loading_video.mp4";
 import React, { useState, useEffect } from "react";
 import "./LoadingPage.css";
+import { isLoadingAtom } from "../atoms/IsLoading";
+import { useRecoilState} from "recoil";
 
-export default function LoadingPage({ onLoaded }) {
+export default function LoadingPage() {
+  const [isLoading, setIsLoading] = useRecoilState(isLoadingAtom);
   const [fadeOut, setFadeOut] = useState(false);
-
+  // const isLoading=useRecoilState(isLoadingAtom);
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => {
-        onLoaded();
+        setIsLoading(false);
       }, 1000);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [onLoaded]);
+  }, [isLoading]);
 
   return (
     <div className={`loading-page ${fadeOut ? "fade-out" : ""}`}>

@@ -2,7 +2,15 @@ import React from 'react'
 import './ProfileBanner.css'
 import ResumeIcon from '../assets/play-button.png'
 import SkillsIcon from '../assets/skills.png'
+import { useNavigate } from 'react-router-dom'
 export default function ProfileBanner() {
+
+    const navigate=useNavigate();   
+
+    function navigateSkill() {
+        navigate('/skills');
+    }
+
   return (
     <div className='profile'>
         <div className='profile-description'>
@@ -25,7 +33,7 @@ export default function ProfileBanner() {
                         Resume
                     </p>
                 </button>
-                <button className="skills-btn button">
+                <button className="skills-btn button" onClick={()=>navigateSkill()}>
                     <img src={SkillsIcon} className='skills-icon' alt="" srcset="" />
                     <p>
                         Skills
