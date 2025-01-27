@@ -41,7 +41,9 @@ function Card({ image, text, onNavigate }) {
   return (
     <div className='card' onClick={() => onNavigate(`/${text.toLowerCase().replace(' ', '-')}`)}>
       <img src={image} className='card-image' alt='developer' />
-      <p>{text}</p>
+      <div className='overlay'>
+        <p className='card-text'>{text}</p>
+      </div>
     </div>
   );
 }
