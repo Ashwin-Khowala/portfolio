@@ -1,7 +1,7 @@
 import React from "react";
 import "./Skills.css";
 import { FaNodeJs, FaReact, FaDatabase, FaJava } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiMysql, SiJavascript, SiCplusplus, SiHtml5 } from "react-icons/si";
+import { SiExpress, SiMongodb, SiMysql, SiJavascript, SiCplusplus, SiHtml5, SiTypescript } from "react-icons/si";
 
 export default function Skills() {
   return (
@@ -43,6 +43,13 @@ export default function Skills() {
             <div className="details">
               <h3>JavaScript</h3>
               <p>Scripting Language</p>
+            </div>
+          </li>
+          <li className="skill-item">
+            <div className="icon"><SiTypescript /></div>
+            <div className="details">
+              <h3>TypeScript</h3>
+              <p>Type Safe JavaScript</p>
             </div>
           </li>
           <li className="skill-item">

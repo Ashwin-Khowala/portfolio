@@ -57,7 +57,7 @@ export default function NavBar() {
               <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact-me">Contact</Link>
             </li>
           </ul>
         </div>

@@ -10,6 +10,7 @@
 }
 
 .profile-description {
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     color: #FFFF;
@@ -43,9 +44,11 @@
     color: #000;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color .3s ease;
 }
 
 .buttons button:hover{
+    transition: background-color .3s ease;
     background-color:#ffffffcb;
 }
 

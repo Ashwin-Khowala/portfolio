@@ -45,7 +45,7 @@ function App() {
             />
             <Route path="/certifications" element={<Certificates />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path='/contact' element={<ContactMe/>}/>
+            <Route path='/contact-me' element={<ContactMe/>}/>
           </Routes>
         </Suspense>
       </BrowserRouter>

@@ -17,7 +17,7 @@ export default function ContactMe() {
                 I am an aspiring software developer with a strong passion for web development. Currently, I am focused on building dynamic web applications using Node.js for the backend and React for the frontend.  
                 </p>
                 <a href='https://www.linkedin.com/in/ashwin-khowala-072493270/' >
-                <FaLinkedin style={{ marginRight: '8px' }} /> 
+                <FaLinkedin style={{ marginRight: '15px' }} /> 
                     LinkedIn
                 </a>
             </div>

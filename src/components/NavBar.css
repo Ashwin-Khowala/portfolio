@@ -33,6 +33,7 @@
     font-weight: bold;
     color: #FFFF;
     padding: 10px;
+    transition: color .3s;
 }
 
 
@@ -52,6 +53,7 @@
     text-decoration: none;
     color: #FFFF;
     padding: 10px;
+    transition: color .3s;
 }
 
 .nav-links ul li a:hover{
@@ -59,4 +61,5 @@
     background: #1a1a1a96;
     border-radius: 5px;
     color:aqua;
+    transition: color .3s;
 }

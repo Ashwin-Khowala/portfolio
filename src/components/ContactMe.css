@@ -81,14 +81,14 @@
     color: #ffffff;
     text-decoration: none;
     background: #0077b5;
-    padding: 10px 30px;
-    border-radius: 5px;
+    padding: 10px 35px;
+    border-radius: 10px;
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .user-details a:hover {
-    background: #357ab8;
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5);
+    background: #357bb8c5;
+    /* box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5); */
 }
 
 .user-details a i {
@@ -129,7 +129,14 @@
     width: 100%; 
 }
 
-.mail:hover , .mobile:hover{
+.mail:hover{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+}
+.mobile:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(25%, 23%) scale(1.1); /* Combine translate and scale */
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
 }
 
