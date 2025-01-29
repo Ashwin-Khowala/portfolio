@@ -55,7 +55,7 @@ function App() {
 
 function DashBoard() {
   return (
-    <div>
+    <div className='container'>
       <ProfileBanner />
       <DevelopersDetails />
     </div>

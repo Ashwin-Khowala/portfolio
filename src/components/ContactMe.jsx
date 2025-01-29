@@ -6,7 +6,7 @@ import { IoIosMail } from "react-icons/io";
 
 export default function ContactMe() {
   return (
-    <div className='container'>
+    <div className='container-contact-me'>
         <div className='linkedIn-container'>
             <div className='user-details'>
                 <img src="https://media.licdn.com/dms/image/v2/D4D03AQFe3XAiDgVRGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698249138375?e=1743638400&v=beta&t=DZqYCY8JIJHMcQoCzXrdgLDr5H91npS_ZM5w9CCRVT4" alt="" />
