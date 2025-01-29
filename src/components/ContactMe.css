@@ -143,8 +143,8 @@
 .mobile {
     display: flex; 
     position: relative;
-    /* transform: translate(25%,23%); */
-    transform: none;
+    transform: translate(25%,23%);
+    /* transform: none; */
     align-items: center;
     justify-content: flex-start; /* Adjust as needed */
     background: #ffffff1a;
