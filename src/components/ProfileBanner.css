@@ -76,3 +76,79 @@
     width: 20px;
     height: 20px;
 }
+
+
+@media (max-width: 1024px) {
+    .profile-description {
+        padding: 15px;
+    }
+
+    .user-name h1 {
+        font-size: 2rem;
+    }
+
+    .user-description {
+        width: 80%;
+    }
+
+    .buttons button {
+        padding: 8px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        height: 60vh;
+        background-position: top;
+        margin-top: -8vh;
+    }
+
+    .profile-description {
+        text-align: center;
+        align-items: center;
+    }
+
+    .user-name h1 {
+        font-size: 1.8rem;
+    }
+
+    .user-description {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons button {
+        width: 80%;
+        padding: 12px;
+    }
+
+    .resume-icon, .skills-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        height: 50vh;
+        margin-top: -7vh;
+    }
+
+    .user-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .user-description {
+        width: 95%;
+        font-size: 0.85rem;
+    }
+
+    .buttons button {
+        width: 90%;
+    }
+}

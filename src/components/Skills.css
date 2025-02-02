@@ -92,3 +92,65 @@
     padding-bottom: 20px;
     color: #999;
 }
+
+
+
+@media (max-width: 1024px) {
+    .skill {
+        width: 90vw;
+    }
+
+    .skill ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .skill-card li {
+        width: 80vw;
+        height: auto;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        padding-top: 10vh;
+    }
+
+    .skill h2 {
+        font-size: 2rem;
+        width: 100%;
+        transform: translateX(0);
+        text-align: center;
+    }
+
+    .skill ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card li {
+        width: 90%;
+        height: auto;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .icon svg {
+        font-size: 2rem;
+    }
+
+    .details h3 {
+        font-size: 1.3rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+        transform: translateX(0);
+    }
+}
+

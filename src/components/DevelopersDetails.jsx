@@ -4,18 +4,13 @@ import { useNavigate } from 'react-router-dom';
 
 export default function DeveloperDetails() {
   const cardsRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleWheelScroll = (event) => {
     if (cardsRef.current) {
       event.preventDefault(); // Prevent vertical scroll
-      cardsRef.current.scrollLeft += event.deltaY; // Horizontal scroll
+      cardsRef.current.scrollLeft += event.deltaY * 1.5; // Smooth horizontal scroll
     }
-  };
-
-  const navigate = useNavigate();
-
-  const handleNavigation = (route) => {
-    navigate(route); 
   };
 
   return (
@@ -26,12 +21,9 @@ export default function DeveloperDetails() {
         ref={cardsRef} 
         onWheel={handleWheelScroll}
       >
-        <Card image="https://picsum.photos/seed/coding/250/200" text="Skills" onNavigate={handleNavigation} />
-        <Card image="https://picsum.photos/seed/development/250/200" text="Projects" onNavigate={handleNavigation} />
-        <Card image="https://picsum.photos/seed/badge/250/200" text="Certifications" onNavigate={handleNavigation} />
-        <Card image="https://picsum.photos/seed/work/250/200" text="Experience" onNavigate={handleNavigation} />
-        <Card image="https://picsum.photos/seed/networking/250/200" text="Recommendations" onNavigate={handleNavigation} />
-        <Card image="https://picsum.photos/seed/connect/250/200" text="Contact Me" onNavigate={handleNavigation} />
+        {["Skills", "Projects", "Certifications", "Experience", "Recommendations", "Contact Me"].map((text, index) => (
+          <Card key={index} image={`https://picsum.photos/seed/${text.replace(/\s/g, '')}/250/200`} text={text} onNavigate={navigate} />
+        ))}
       </div>
     </div>
   );
@@ -39,7 +31,7 @@ export default function DeveloperDetails() {
 
 function Card({ image, text, onNavigate }) {
   return (
-    <div className='card' onClick={() => onNavigate(`/${text.toLowerCase().replace(' ', '-')}`)}>
+    <div className='card' onClick={() => onNavigate(`/${text.toLowerCase().replace(/\s/g, '-')}`)}>
       <img src={image} className='card-image' alt='developer' />
       <div className='overlay'>
         <p className='card-text'>{text}</p>
@@ -47,3 +39,4 @@ function Card({ image, text, onNavigate }) {
     </div>
   );
 }
+
