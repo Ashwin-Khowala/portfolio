@@ -6,6 +6,7 @@ import LoadingPage from './components/LoadingPage';
 import NavBar from './components/NavBar';
 import ProfileBanner from './components/ProfileBanner';
 import DevelopersDetails from './components/DevelopersDetails';
+import Projects from "./components/Projects";
 import './App.css';
 
 const Certificates = lazy(() => import('./components/Certificates'));
@@ -44,6 +45,7 @@ function App() {
               }
             />
             <Route path="/certifications" element={<Certificates />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path='/contact-me' element={<ContactMe/>}/>
           </Routes>
