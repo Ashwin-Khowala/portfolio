@@ -8,7 +8,6 @@
     background: linear-gradient(180deg, #000001e6 10%, #141414e6);      
     font-family: 'Arial', sans-serif;
     flex-direction: column;
-    /* background-image: url('your-image-path.jpg'); Add background image if needed */
     background-size: cover;
     background-position: center;
 }
@@ -88,7 +87,6 @@
 
 .user-details a:hover {
     background: #357bb8c5;
-    /* box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5); */
 }
 
 .user-details a i {
@@ -136,7 +134,7 @@
 }
 .mobile:hover {
     transition: transform 0.3s ease-in-out;
-    transform: translate(25%, 23%) scale(1.1); /* Combine translate and scale */
+    transform: translate(25%, 23%) scale(1.1); 
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
 }
 
@@ -144,15 +142,14 @@
     display: flex; 
     position: relative;
     transform: translate(25%,23%);
-    /* transform: none; */
     align-items: center;
-    justify-content: flex-start; /* Adjust as needed */
+    justify-content: flex-start; 
     background: #ffffff1a;
-    padding: 10px 20px; /* Add padding for spacing */
+    padding: 10px 20px; 
     border-radius: 20px;
     box-shadow: 0 4px 10px #00000080;
     margin-top: 15px;
-    width: 65%; /* Explicit width for distinction */
+    width: 65%; 
 }
 
 /* Common styles for links */
