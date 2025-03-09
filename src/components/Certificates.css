@@ -163,12 +163,15 @@
     .certificate h3 {
         padding: 20px 10px;
         font-size: 1.5rem;
-        width: 120px;
+        width: 50%;
         color: #ffffff;
         text-align: left;
-        overflow: hidden;
         position: relative;
-        right: 35px;
+        margin: 20px;
+        transform: translate(55%, -10%);
+        word-wrap: break-word;
+        white-space: normal;
+        text-wrap: balance;
     }
 }
 
