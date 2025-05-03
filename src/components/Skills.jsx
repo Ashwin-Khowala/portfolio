@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import { FaNodeJs, FaReact, FaDatabase, FaJava } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaDatabase, FaJava, FaDocker } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiMysql, SiJavascript, SiCplusplus, SiHtml5, SiTypescript } from "react-icons/si";
 
 export default function Skills() {
@@ -62,6 +62,29 @@ export default function Skills() {
         </ul>
       </div>
 
+
+      {/* Cloud & DevOps */}
+      <div className="languages skill">
+        <h2>Cloud & DevOps</h2>
+        <ul className="skill-card">
+          <li className="skill-item">
+            <div className="icon"><FaReact /></div>
+            <div className="details">
+              <h3>CI/CD</h3>
+              <p>Continuous Integration & Delivery</p>
+            </div>
+          </li>
+          <li className="skill-item">
+            <div className="icon"><FaDocker /></div>
+            <div className="details">
+              <h3>Docker</h3>
+              <p>Containerization</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
       {/* Programming Languages */}
       <div className="languages skill">
         <h2>Languages</h2>
@@ -82,6 +105,8 @@ export default function Skills() {
           </li>
         </ul>
       </div>
+
+  
 
       {/* Databases */}
       <div className="databases skill">
