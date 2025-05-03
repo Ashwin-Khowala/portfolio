@@ -64,7 +64,7 @@ export default function Skills() {
 
 
       {/* Cloud & DevOps */}
-      <div className="languages skill">
+      <div className="devops skill">
         <h2>Cloud & DevOps</h2>
         <ul className="skill-card">
           <li className="skill-item">
@@ -79,6 +79,13 @@ export default function Skills() {
             <div className="details">
               <h3>Docker</h3>
               <p>Containerization</p>
+            </div>
+          </li>
+          <li className="skill-item">
+            <div className="icon"><FaDocker /></div>
+            <div className="details">
+              <h3>Azure</h3>
+              <p>Cloud Platform</p>
             </div>
           </li>
         </ul>
