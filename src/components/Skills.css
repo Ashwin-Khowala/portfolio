@@ -118,7 +118,13 @@
 
 @media (max-width: 768px) {
     .skills-container {
-        padding-top: 10vh;
+        padding-top: 4vh;
+    }
+
+    .skill-item {
+        width: 40vw;
+        height: auto;
+        margin: 10px 0;
     }
 
     .skill h2 {
@@ -129,7 +135,7 @@
     }
 
     .skill ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -141,7 +147,7 @@
     }
 
     .icon svg {
-        font-size: 2rem;
+        font-size: 5rem;
     }
 
     .details h3 {
