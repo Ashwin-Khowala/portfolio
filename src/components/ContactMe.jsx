@@ -2,6 +2,7 @@ import React from 'react'
 import './ContactMe.css'
 import { FaLinkedin ,FaPhoneAlt} from 'react-icons/fa';
 import { IoIosMail } from "react-icons/io";
+import ashwinKhowala from "../assets/ashwinkhowala.jpg";
 
 
 export default function ContactMe() {
@@ -9,7 +10,7 @@ export default function ContactMe() {
     <div className='container-contact-me'>
         <div className='linkedIn-container'>
             <div className='user-details'>
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFe3XAiDgVRGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698249138375?e=1743638400&v=beta&t=DZqYCY8JIJHMcQoCzXrdgLDr5H91npS_ZM5w9CCRVT4" alt="" />
+                <img src={ashwinKhowala} alt="" />
 
                 <p className='name'>Ashwin Khowala</p>
                 <p className='user-detail'>Aspiring Software Developer</p>
