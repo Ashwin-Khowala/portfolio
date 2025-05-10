@@ -1,6 +1,6 @@
 import React from "react";
 import "./Skills.css";
-import { FaNodeJs, FaReact, FaDatabase, FaJava, FaDocker } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaJava, FaDocker , FaCloudflare , FaCloud} from "react-icons/fa";
 import { SiExpress, SiMongodb, SiMysql, SiJavascript, SiCplusplus, SiHtml5, SiTypescript } from "react-icons/si";
 
 export default function Skills() {
@@ -82,10 +82,17 @@ export default function Skills() {
             </div>
           </li>
           <li className="skill-item">
-            <div className="icon"><FaDocker /></div>
+            <div className="icon"><FaCloud/></div>
             <div className="details">
               <h3>Azure</h3>
               <p>Cloud Platform</p>
+            </div>
+          </li>
+          <li className="skill-item">
+            <div className="icon"><FaCloudflare/></div>
+            <div className="details">
+              <h3>Cloudflare Workers</h3>
+              <p>Serverless deployment</p>
             </div>
           </li>
         </ul>
