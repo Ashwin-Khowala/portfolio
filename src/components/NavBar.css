@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ .nav-bar {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; 
+    background-image: linear-gradient(180deg, #000001e6 10%, #0000);
+}
+
+ .nav-bar.scrolled {
+    background: #1a1a1a; 
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+     /* border-bottom: 2px solid #0580eb; */
+ } 
+
+ .nav-bar.scrolled .nav-links a:hover{
+    color:aqua;
+ }
+
+.nav-title a{
+    text-decoration: none; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFFF;
+    padding: 10px;
+    transition: color .3s;
+}
+
+
+.nav-links ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links ul li{
+    list-style: none;
+    padding: 0px 15px;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    color: #FFFF;
+    padding: 10px;
+    transition: color .3s;
+}
+
+.nav-links ul li a:hover{
+    color: #FFFF;
+    background: #1a1a1a96;
+    border-radius: 5px;
+    color:aqua;
+    transition: color .3s;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .nav-bar {
+        height: 8vh;
+        padding: 0 20px;
+    }
+
+    .nav-title a {
+        font-size: 2rem;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+    }
+
+    .nav-links ul li {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        height: 8vh;
+        flex-direction: row;
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links ul li {
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
