@@ -16,10 +16,10 @@ export default function NavBar() {
   const setShouldShowLoading = useSetAtom(shouldShowLoadingAtom)
 
   const handleNameClick = () => {
-    // setIsLoading(true)
-    // setShouldShowLoading(true)
+    setIsLoading(true)
+    setShouldShowLoading(true)
     sessionStorage.removeItem("hasVisitedSite")
-    router.push('/?fromNavbar=true');
+    // router.push('/?fromNavbar=true');
   }
 
 

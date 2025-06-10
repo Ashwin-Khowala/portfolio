@@ -5,14 +5,14 @@ import ProfileBanner from "@/components/ProfileBanner";
 import { useEffect, useState } from "react";
 import { useAtomValue, useSetAtom } from "jotai";
 import { isFirstLoading, isLoadingAtom, shouldShowLoadingAtom } from "@/atoms/IsLoading";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 
 export default function Home() {
   const setIsLoading = useSetAtom(isLoadingAtom);
   const setShouldShowLoading = useSetAtom(shouldShowLoadingAtom);
   const isLoading = useAtomValue(isLoadingAtom);
   const shouldShowLoading = useAtomValue(shouldShowLoadingAtom);
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
   const isFirstLoad = useAtomValue(isFirstLoading);
   const setIsFirstLoad = useSetAtom(isFirstLoading);
@@ -39,7 +39,8 @@ export default function Home() {
         setShouldShowLoading(false);
         // setHasInitialized(true);
       }
-  }, [setIsLoading, setShouldShowLoading, searchParams]);
+  }, [setIsLoading, setShouldShowLoading]);
+  // }, [setIsLoading, setShouldShowLoading,searchParams]);
 
   return (
     <div className="min-h-screen">
@@ -58,3 +59,17 @@ function DashBoard() {
     </div>
   );
 }
+
+
+// app/page.tsx
+// import { Suspense } from "react";
+// import PageWithSearchParams from "@/components/MainPage";
+// import LoadingPage from "@/components/LoadingPage.t/LoadingPage";
+
+// export default function Home() {
+//   return (
+//     <Suspense fallback={<LoadingPage/>}>
+//       <PageWithSearchParams />
+//     </Suspense>
+//   );
+// }
