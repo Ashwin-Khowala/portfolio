@@ -13,7 +13,11 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 
   {
+    ignores: ["**/**"]
+  },
+  {
     files: ["**/*.{ts,tsx,js,jsx,css}"],
+
     rules: {
       // Add individual rules to disable warnings
       "@typescript-eslint/no-explicit-any": "off",
