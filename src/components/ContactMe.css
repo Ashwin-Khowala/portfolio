@@ -1,0 +1,210 @@
+/* Container for the whole section */
+.container-contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;  
+    background: linear-gradient(180deg, #000001e6 10%, #141414e6);      
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card-style container for LinkedIn details */
+.linkedIn-container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff1a;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(1, 109, 224, 0.259);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* User details image styling */
+.user-details img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #514ae2;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-details img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #4a90e2;
+}
+
+/* Name styling */
+.user-details .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Short user title */
+.user-details .user-detail {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* Description paragraph */
+.user-details .user-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 20px;
+    position: inherit;
+    transform: translate(5%,6%);
+    width: 90%;
+}
+
+/* LinkedIn link */
+.user-details a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background: #0077b5;
+    padding: 10px 35px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-details a:hover {
+    background: #357bb8c5;
+}
+
+.user-details a i {
+    margin-right: 8px;
+}
+
+/* Contact details section */
+.contact-details {
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.desc {
+    font-weight: bold;
+    color: #ccc;
+    font-size: 2rem !important;
+}
+
+.icons{
+    color: #05d0eb;
+    font-size: 2rem;
+    display: flex;
+    position: relative;
+
+}
+
+.mail {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start; 
+    background: #ffffff1a;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #00000080;
+    margin-top: 15px;
+    width: 100%; 
+}
+
+.mail:hover{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+}
+.mobile:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(25%, 23%) scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+}
+
+.mobile {
+    display: flex; 
+    position: relative;
+    transform: translate(25%,23%);
+    align-items: center;
+    justify-content: flex-start; 
+    background: #ffffff1a;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #00000080;
+    margin-top: 15px;
+    width: 65%; 
+}
+
+/* Common styles for links */
+.mail a, .mobile a {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mail a:hover, .mobile a:hover {
+    color: #0077b5;
+    
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .linkedIn-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .user-details img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .user-details .name {
+        font-size: 1.3rem;
+    }
+
+    .user-details .user-detail,
+    .user-details .user-description {
+        font-size: 0.85rem;
+    }
+
+    .user-details a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-contact-me::-webkit-scrollbar{
+    display: none;
+}
