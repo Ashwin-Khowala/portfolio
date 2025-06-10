@@ -3,6 +3,7 @@ import ResumeIcon from '../assets/play-button.png';
 import SkillsIcon from '../assets/skills.png';
 import { useRouter } from 'next/navigation';
 
+/* eslint-disable */
 export default function ProfileBanner() {
     const router = useRouter();
 

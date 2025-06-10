@@ -37,7 +37,7 @@ export default function NavBar() {
       <div className="nav-title" onClick={
         handleNameClick
       }>
-        <a href="/">Ashwin Khowala</a>
+        <Link href="/">Ashwin Khowala </Link>
       </div>
 
       <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>

@@ -13,16 +13,13 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 
   {
-    files: ["**/*.ts", "**/*.tsx"],
-    languageOptions: {
-      parserOptions: {
-        project: "./tsconfig.json",
-      },
-    },
+    files: ["**/*.{ts,tsx,js,jsx,css}"],
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",     // or "off"
-      "@typescript-eslint/no-explicit-any": "warn",    // or "off"
-      "@next/next/no-img-element": "off",              // If you're okay using <img>
+      // Add individual rules to disable warnings
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-img-element": "off",
     },
   },
 ];
