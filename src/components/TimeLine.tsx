@@ -1,65 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react"
-import { Calendar, MapPin, Trophy, Briefcase, GraduationCap, Star } from "lucide-react"
+import { Calendar, MapPin, GraduationCap } from "lucide-react"
 
 const timelineData = [
   {
     id: 1,
-    date: "2024",
-    title: "Senior Full Stack Developer",
+    date: "2027",
+    title: "B.Tech in Computer Science",
     description:
-      "Led a team of 5 developers in building scalable web applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved deployment efficiency by 40%.",
-    location: "San Francisco, CA",
-    icon: <Briefcase className="w-5 h-5" />,
-    type: "work",
-  },
-  {
-    id: 2,
-    date: "2023",
-    title: "Best Innovation Award",
-    description:
-      "Received company-wide recognition for developing an AI-powered customer service chatbot that reduced response time by 60% and improved customer satisfaction scores.",
-    icon: <Trophy className="w-5 h-5" />,
-    type: "achievement",
-  },
-  {
-    id: 3,
-    date: "2022",
-    title: "Full Stack Developer",
-    description:
-      "Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive and accessible user interfaces.",
-    location: "Remote",
-    icon: <Briefcase className="w-5 h-5" />,
-    type: "work",
-  },
-  {
-    id: 4,
-    date: "2021",
-    title: "Master's in Computer Science",
-    description:
-      "Graduated with honors, specializing in Machine Learning and Web Technologies. Completed thesis on 'Optimizing React Applications for Performance'.",
-    location: "Stanford University",
+      "Undergrad in Kiit University",
+    location: "KIIT University",
     icon: <GraduationCap className="w-5 h-5" />,
     type: "education",
-  },
-  {
-    id: 5,
-    date: "2020",
-    title: "First Open Source Contribution",
-    description:
-      "Made first significant contribution to a popular React library, which was merged and is now used by thousands of developers worldwide.",
-    icon: <Star className="w-5 h-5" />,
-    type: "milestone",
-  },
-  {
-    id: 6,
-    date: "2019",
-    title: "Junior Developer",
-    description:
-      "Started career as a junior developer, working on front-end applications and learning modern development practices. Built first production React application.",
-    location: "New York, NY",
-    icon: <Briefcase className="w-5 h-5" />,
-    type: "work",
   },
 ]
 
@@ -168,7 +120,7 @@ export default function Timeline() {
   }, [])
 
   return (
-    <div className="min-h-screen py-16 px-4 bg-gray-900">
+    <div className="min-h-screen py-16 px-4 bg-[#141414]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
