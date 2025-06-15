@@ -1,7 +1,7 @@
-import Timeline from "@/components/TimeLine"
+import Component from "@/components/TimeLine"
 
 export default function page() {
   return (
-    <Timeline/>
+    <Component/>
   )
 }
