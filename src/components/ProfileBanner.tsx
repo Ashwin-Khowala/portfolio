@@ -1,6 +1,6 @@
 import './ProfileBanner.css';
-import ResumeIcon from '../assets/play-button.png';
-import SkillsIcon from '../assets/skills.png';
+const ResumeIcon ='./assets/play-button.png';
+const SkillsIcon = './assets/skills.png';
 import { useRouter } from 'next/navigation';
 
 /* eslint-disable */
@@ -34,13 +34,13 @@ export default function ProfileBanner() {
 
                 <div className="buttons">
                     <button className="resume-btn  button">
-                        <img src={ResumeIcon.src} className="resume-icon" alt="" srcSet="" />
+                        <img src={ResumeIcon} className="resume-icon" alt="" srcSet="" />
                         <p>
                             Resume
                         </p>
                     </button>
                     <button className="skills-btn button" onClick={() => navigateSkill()}>
-                        <img src={SkillsIcon.src} className='skills-icon' alt="" srcSet="" />
+                        <img src={SkillsIcon} className='skills-icon' alt="" srcSet="" />
                         <p>
                             Skills
                         </p>

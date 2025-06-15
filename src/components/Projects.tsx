@@ -2,9 +2,10 @@ import React from "react";
 import { FaNodeJs, FaReact, FaDatabase } from "react-icons/fa"; // Import icons
 import { SiMongodb, SiExpress, SiFlask, SiHtml5, SiCss3 } from "react-icons/si";
 import "./projects.css";
-import safeBankImage from "../assets/safe_bank.png";
-import musicureAiImage from "../assets/musicure-ai.png";
 
+
+const safeBankImage = "./assets/safe_bank.png";
+const musicureAiImage = "./assets/musicure-ai.png";
 
 // Map technologies to their corresponding icons
 const techIcons :any = {
