@@ -14,7 +14,7 @@ export default function RootLayout({
           <div className="h-[5vh] md:h-[10vh]">
             <NavBar />
           </div>
-          <div>
+          <div className="md:h-[90vh]">
             {children}
           </div>
         {/* </LoadingProvider> */}

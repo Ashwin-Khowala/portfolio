@@ -15,7 +15,7 @@ const timelineData = [
   },
 ]
 
-const getTypeColor = (type:any) => {
+const getTypeColor = (type: any) => {
   switch (type) {
     case "work":
       return "bg-blue-500"
@@ -30,7 +30,7 @@ const getTypeColor = (type:any) => {
   }
 }
 
-function TimelineItemComponent({ item, index }:any) {
+function TimelineItemComponent({ item, index }: any) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef(null)
 
@@ -56,11 +56,10 @@ function TimelineItemComponent({ item, index }:any) {
   return (
     <div
       ref={ref}
-      className={`flex items-center w-full transition-all duration-700 ease-out ${
-        isVisible
+      className={`flex items-center w-full transition-all duration-700 ease-out ${isVisible
           ? "opacity-100 translate-y-0 translate-x-0"
           : `opacity-0 translate-y-8 ${isEven ? "-translate-x-8" : "translate-x-8"}`
-      } ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
+        } ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
     >
       {/* Content */}
       <div className={`w-full md:w-5/12 ${isEven ? "md:pr-8" : "md:pl-8"}`}>
@@ -75,11 +74,11 @@ function TimelineItemComponent({ item, index }:any) {
             </div>
           </div>
 
-          <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+          <h3 className="text-xl  font-bold text-white mb-2 ">{item.title}</h3>
 
           {item.location && (
             <div className="flex items-center gap-1 text-gray-400 text-sm mb-3">
-              <MapPin className="w-4 h-4" />
+              <MapPin className="w-4 h-8" />
               <span>{item.location}</span>
             </div>
           )}
@@ -92,14 +91,12 @@ function TimelineItemComponent({ item, index }:any) {
       <div className="hidden md:flex w-2/12 justify-center">
         <div className="relative">
           <div
-            className={`w-4 h-4 rounded-full ${getTypeColor(item.type)} border-4 z-10 relative transition-all duration-500 ${
-              isVisible ? "scale-100 border-gray-800" : "scale-0 border-gray-900"
-            }`}
+            className={`w-4 h-4 rounded-full ${getTypeColor(item.type)} border-4 z-10 relative transition-all duration-500 ${isVisible ? "scale-100 border-gray-800" : "scale-0 border-gray-900"
+              }`}
           />
           <div
-            className={`absolute inset-0 w-4 h-4 rounded-full ${getTypeColor(item.type)} opacity-30 transition-all duration-700 ${
-              isVisible ? "animate-ping" : ""
-            }`}
+            className={`absolute inset-0 w-4 h-4 rounded-full ${getTypeColor(item.type)} opacity-30 transition-all duration-700 ${isVisible ? "animate-ping" : ""
+              }`}
           />
         </div>
       </div>
@@ -120,16 +117,15 @@ export default function Timeline() {
   }, [])
 
   return (
-    <div className="min-h-screen py-16 px-4 bg-[#141414]">
+    <div className="min-h-screen py-16 px-4 bg-[#141414] w-screen flex justify-center">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ease-out ${
-            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
-          }`}
+          className={`w-screen text-center mb-16 transition-all duration-700 ease-out ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
+            }`}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">My Journey</h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="w-[100vw] text-xl text-gray-400  mx-auto flex justify-center">
             A timeline of my professional growth, achievements, and milestones
           </p>
         </div>
@@ -140,11 +136,13 @@ export default function Timeline() {
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-green-500 h-full opacity-30" />
 
           {/* Timeline items */}
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-12  md:space-y-16">
+          {/* <div className="m-[90px] "> */}
             {timelineData.map((item, index) => (
               <TimelineItemComponent key={item.id} item={item} index={index} />
             ))}
           </div>
+
         </div>
 
         {/* Footer */}
