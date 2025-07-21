@@ -2,7 +2,7 @@
 import DevelopersDetails from "@/components/DevelopersDetails";
 import LoadingPage from "@/components/LoadingPage.t/LoadingPage";
 import ProfileBanner from "@/components/ProfileBanner";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAtomValue, useSetAtom } from "jotai";
 import { isFirstLoading, isLoadingAtom, shouldShowLoadingAtom } from "@/atoms/IsLoading";
 // import { useSearchParams } from "next/navigation";
